@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="doi:10.18739/A2K86G" system="https://arcticdata.io" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 eml.xsd">
+  <access order="allowFirst" authSystem="knb">
+    <allow>
+      <principal>CN=arctic-data-admins,DC=dataone,DC=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>http://orcid.org/0000-0002-2801-3124</principal>
+      <permission>all</permission>
+    </allow>
+  </access>
+  <dataset>
+    <title>LeConte Glacier meteorological data 2016-2017, Alaska</title>
+    <creator id="amundson">
+      <individualName>
+        <givenName>Jason</givenName>
+        <surName>Amundson</surName>
+      </individualName>
+      <organizationName>University of Alaska Southeast</organizationName>
+      <positionName>Associate Professor of Geophysics</positionName>
+      <address>
+        <deliveryPoint>11066 Auke Lake Way</deliveryPoint>
+        <city>Juneau</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99801</postalCode>
+        <country>United States</country>
+      </address>
+      <phone phonetype="voice">+1 (907) 796-6247</phone>
+      <electronicMailAddress>jmamundson@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-2801-3124</userId>
+    </creator>
+    <creator id="9234483872552392">
+      <individualName>
+        <givenName>Christian</givenName>
+        <surName>Kienholz</surName>
+      </individualName>
+      <organizationName>University of Alaska Southeast</organizationName>
+      <positionName>Postdoctoral Scholar</positionName>
+      <address>
+        <deliveryPoint>11066 Auke Lake Way</deliveryPoint>
+        <city>Juneau</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99801</postalCode>
+        <country>United States</country>
+      </address>
+      <electronicMailAddress>ckienholz@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-7962-4446</userId>
+    </creator>
+    <creator id="3996431058054149">
+      <individualName>
+        <givenName>Roman</givenName>
+        <surName>Motyka</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <address>
+        <administrativeArea>Alaska</administrativeArea>
+        <country>United States</country>
+      </address>
+    </creator>
+    <creator id="8740048631319377">
+      <individualName>
+        <givenName>David</givenName>
+        <surName>Sutherland</surName>
+      </individualName>
+      <organizationName>University of Oregon</organizationName>
+      <address>
+        <administrativeArea>Oregon</administrativeArea>
+        <country>United States</country>
+      </address>
+    </creator>
+    <creator id="1937752270605981">
+      <individualName>
+        <givenName>Jonathan</givenName>
+        <surName>Nash</surName>
+      </individualName>
+      <organizationName>Oregon State University</organizationName>
+      <address>
+        <administrativeArea>Oregon</administrativeArea>
+        <country>United States</country>
+      </address>
+    </creator>
+    <creator id="1429814998005488">
+      <individualName>
+        <givenName>Rebecca</givenName>
+        <surName>Jackson</surName>
+      </individualName>
+      <organizationName>Oregon State University</organizationName>
+      <address>
+        <administrativeArea>Oregon</administrativeArea>
+        <country>United States</country>
+      </address>
+    </creator>
+    <metadataProvider>
+      <references>amundson</references>
+    </metadataProvider>
+    <pubDate>2017-11-14</pubDate>
+    <abstract>
+      <para>In 2016-2017 we conducted a field study at LeConte Glacier, Alaska, to study the impacts of subglacial discharge on plume dynamics and submarine melting. As part of that study we operated a Campbell Scientific weather station near the glacier terminus that recorded temperature, rain, wind speed and direction, humidity, incoming shortwave radiation, and barometric pressure. In addition, we also deployed HOBO temperature sensors and tipping bucket rain gauges at two locations: one was across the terminus from the base camp and the other was about 7 km upglacier from the terminus.</para>
+    </abstract>
+    <intellectualRights>
+      <para>
+This work is licensed under the Creative Commons Attribution 4.0 International License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
+</para>
+    </intellectualRights>
+    <distribution>
+      <offline>
+        <mediumName>digital </mediumName>
+      </offline>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>LeConte Glacier, Alaska</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-132.3517</westBoundingCoordinate>
+          <eastBoundingCoordinate>-132.3517</eastBoundingCoordinate>
+          <northBoundingCoordinate>56.8281</northBoundingCoordinate>
+          <southBoundingCoordinate>56.8281</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2016-03-28</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2017-09-18</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <contact>
+      <references>amundson</references>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Meteorological data collection</title>
+            <para>We operated three weather stations at the following locations: </para>
+            <para>
+              <orderedlist>
+                <listitem>
+                  <para>Campbell Scientific: 56.8282 N, 132.3522 W, 446.9 m.a.s.l.
+</para>
+                </listitem>
+                <listitem>
+                  <para>HOBO (north): 56.8427 N, 132.3562 W, 289.0 m.a.s.l.
+</para>
+                </listitem>
+                <listitem>
+                  <para>HOBO (upper): 56.8922 N, 132.3526 W, 956.0 m.a.s.l.
+</para>
+                </listitem>
+              </orderedlist>
+            </para>
+            <para>
+            The primary station was a Campbell Scientific General Research Grade Weather Station (GRWS1000). It had sensors to measure temperature and relative humidity (EE181-L), rainfall (TE525WS-L), wind speed and direction (05103-L), incoming shortwave radiation (CS300-L), and barometric pressure (CS100).
+          </para>
+            <para>
+            We also deployed two smaller weather stations ("north" and "upper") that only measured rainfall, temperature and relative humidity. Both used HOBO temperature sensors (HOBO U23) and tipping buckets (HOBO RG3M). The tipping buckets were surrounded by Rain Gage Wind Screens (Campbell Scientific 260-953).
+          </para>
+          </section>
+        </description>
+      </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>
+The Campbell Scientific station and the HOBO (north) station operated throughout the duration of the project.
+The HOBO (upper) station was only operational from April-September 2016 due to snow cover at the site.
+</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>
+The Campbell Scientific Station was programmed to calculate averages over 15 minutes
+and 60 minutes based on measurements taken every 10 seconds. The data are stored in
+separate csv files: 'campbell_data15.csv' and 'campbell_data60.csv'.
+</para>
+          <para>
+The HOBO stations recorded every 15 minutes and were averaged to hourly values
+(summed in the case of precipitation). The data for both stations is contained a
+single csv file ('hobo_climate.csv'); the last column for each data sample indicates the station as either
+'north' or 'upper'.
+</para>
+          <para>
+The csv files reflect a continuous time series. A row with empty fields means no
+data was collected at that time (the station was not operational, possibly due to
+low battery voltage), and does not represent a problem with the file itself.
+          </para>
+        </samplingDescription>
+      </sampling>
+    </methods>
+    <project>
+      <title>LeConte Glacier meteorological data 2016-2017</title>
+      <personnel>
+        <individualName>
+          <givenName>Jason</givenName>
+          <surName>Amundson</surName>
+        </individualName>
+        <role>originator</role>
+      </personnel>
+      <funding>
+        <para>1504288</para>
+        <para>1504521</para>
+        <para>1503910</para>
+        <para>1504191</para>
+      </funding>
+    </project>
+    <dataTable>
+      <entityName>campbell_data60.csv</entityName>
+      <entityDescription>Campbell Scientific Station, 60 min averages. Averages were calculated based on measurements taken every 10 seconds. The station was located at 56.8282 N, 132.3522 W, 446.9 m.a.s.l.</entityDescription>
+      <physical scope="document">
+        <objectName>campbell_data60.csv</objectName>
+        <size unit="bytes">1387462</size>
+        <authentication method="SHA1">4ff3237be758a3f291687fb9d7179cae66c0608c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution scope="document">
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:cd9f09f0-04b6-4acf-aa4a-49ae438b99e5</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>id</attributeName>
+          <attributeDefinition>Row number</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>row number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Time</attributeName>
+          <attributeDefinition>Time in UTC; Values reported always correspond to the subsequent time interval (e.g. 13:00 corresponds to the time interval 13:00 to 14:00 in the case of the hourly data).</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>AirTC_Avg</attributeName>
+          <attributeDefinition>Average air temperature in celsius</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>BP_mmHg_Avg</attributeName>
+          <attributeDefinition>Average barometric pressure in mm Hg</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <customUnit>millimetersMercury</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>BattV_Avg</attributeName>
+          <attributeDefinition>Average battery voltage, should be &gt;12</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>volt</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>BattV_Min</attributeName>
+          <attributeDefinition>Minimum battery voltage</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>volt</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>RECORD</attributeName>
+          <attributeDefinition>Record number</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>record number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Rain_mm_Tot</attributeName>
+          <attributeDefinition>Total rain in mm, summed over each measurement interval</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>SlrMJ_Tot</attributeName>
+          <attributeDefinition>Total incoming shortwave radiation in megajoules</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>megajoule</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>SlrkW_Avg</attributeName>
+          <attributeDefinition>Average incoming shortwave radiation in kilowatts</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>kilowatt</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WS_ms_Avg</attributeName>
+          <attributeDefinition>Average wind speed in m/s</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>metersPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WS_ms_Max</attributeName>
+          <attributeDefinition>Maximum wind speed in m/s</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>metersPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WS_ms_TMx</attributeName>
+          <attributeDefinition>Time of maximum wind speed</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WindDir</attributeName>
+          <attributeDefinition>Wind direction in degrees</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>campbell_data15.csv</entityName>
+      <entityDescription>Campbell Scientific Station, 15 min averages. Averages were calculated based on measurements taken every 10 seconds. The station was located at 56.8282 N, 132.3522 W, 446.9 m.a.s.l.</entityDescription>
+      <physical scope="document">
+        <objectName>campbell_data15.csv</objectName>
+        <size unit="bytes">5077236</size>
+        <authentication method="SHA1">3e88164c7fa6cc3058906a1a9554ff578810be28</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution scope="document">
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:ee590dc8-0c24-4cb4-85ad-647214f41753</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>id</attributeName>
+          <attributeDefinition>Row number</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>row number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Time</attributeName>
+          <attributeDefinition>Time in UTC; Values reported always correspond to the subsequent time interval (e.g. 13:00 corresponds to the time interval 13:00 to 14:00 in the case of the hourly data).</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>AirTC_Avg</attributeName>
+          <attributeDefinition>Average air temperature in celsius</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>BattV_Avg</attributeName>
+          <attributeDefinition>Average battery voltage, should be &gt;12</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>volt</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>BattV_Min</attributeName>
+          <attributeDefinition>Minimum battery voltage</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>volt</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>RECORD</attributeName>
+          <attributeDefinition>Record number</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>record number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Rain_mm_Tot</attributeName>
+          <attributeDefinition>Total rain in mm, summed over each measurement interval</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>SlrMJ_Tot</attributeName>
+          <attributeDefinition>Total incoming shortwave radiation in megajoules</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>megajoule</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>SlrkW_Avg</attributeName>
+          <attributeDefinition>Average incoming shortwave radiation in kilowatts</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>kilowatt</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WS_ms_Avg</attributeName>
+          <attributeDefinition>Average wind speed in m/s</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>metersPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WS_ms_Max</attributeName>
+          <attributeDefinition>Maximum wind speed in m/s</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>metersPerSecond</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WS_ms_TMx</attributeName>
+          <attributeDefinition>Time of maximum wind speed</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>WindDir</attributeName>
+          <attributeDefinition>Wind direction in degrees</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>hobo_climate.csv</entityName>
+      <entityDescription>HOBO north and upper station data, 60 min averages. Averages were calculated based on measurements taken every 15 minutes (summed in the case of precipitation).</entityDescription>
+      <physical scope="document">
+        <objectName>hobo_climate.csv</objectName>
+        <size unit="bytes">1320198</size>
+        <authentication method="SHA1">6918748d18cf8729e41f7be1ca118044070aff78</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution scope="document">
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:087bf762-ea3d-444f-ba59-1c0bc02fd415</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>id</attributeName>
+          <attributeDefinition>Entry ID (row #)</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Row number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>time_utc</attributeName>
+          <attributeDefinition>Time in UTC, values correspond to the subsequent time interval (e.g. 13:00 corresponds to the time interval 13:00-14:00)</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>precip_mm</attributeName>
+          <attributeDefinition>Precipitation in mm</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>millimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>name_station</attributeName>
+          <attributeDefinition>Station name</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Station name, either "upper" or "north"</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>temp_centigrade</attributeName>
+          <attributeDefinition>Air temperature in celsius</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>humidity_percent</attributeName>
+          <attributeDefinition>Relative humidity, %</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>station not operational</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <unit id="millimetersMercury" name="millimetersMercury" parentSI="pascal" unitType="pressure"/>
+        <unit id="megajoule" name="megajoule" parentSI="joule" unitType="energy"/>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

@@ -1,0 +1,11 @@
+Package: emlspice
+Title: Converts EML to Tabular Formats
+Version: 0.0.0.9000
+Authors@R: person("Irene", "Steves", email = "first.last@example.com", role = c("aut", "cre"))
+Description: emlspice converts EML files to tabular formats as specified in the dataspice package. Tabular formats can also be exported as csv's.
+Depends: R (>= 3.3.3)
+Imports: dplyr, eml2, purrr, readr, tibble, tidyr
+License: CC0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
