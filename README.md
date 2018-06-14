@@ -1,5 +1,5 @@
 # emlspice
-Functions for translating EML into `dataspice` tabular formats
+Functions for translating EML into [`dataspice`](https://github.com/ropenscilabs/dataspice) tabular formats
 
 ## Installation
 
@@ -17,4 +17,5 @@ eml <- read_eml(eml_path)
 es_attributes(eml)
 es_access(eml)
 es_biblio(eml)
+es_creators(eml)
 ```
