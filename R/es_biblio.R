@@ -58,6 +58,6 @@ es_biblio <- function(eml, path = NULL) {
     return(out)
     
     if(!is.null(path)){
-        readr::write_csv(out, path)
+        readr::write_csv(out, path = path)
     }
 }
