@@ -3,7 +3,7 @@ get_attributes_spice <- function(x) {
     #input a dataTable or otherEntity
     
     objName <- x$physical$objectName
-    attr <- suppressWarnings(eml2::get_attributes(x$attributeList))
+    attr <- eml2::get_attributes(x$attributeList)
     
     #set datetime format as unit
     na_units <- is.na(attr$attributes$unit)
