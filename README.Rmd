@@ -1,0 +1,79 @@
+---
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  out.width = "100%",
+  out.height = "150px"
+)
+library(knitr)
+library(magrittr)
+library(stringr)
+library(dplyr)
+```
+
+# emlspice
+
+Functions for translating EML into [`dataspice`](https://github.com/ropenscilabs/dataspice) tabular formats:
+
+* **attributes.csv** - explains each of the variables in the dataset
+* **biblio.csv** - for spatial and temporal coverage, dataset name, keywords, etc.
+* **access.csv** - for files and file types
+* **creators.csv** - for data authors
+
+## Installation
+
+```{r eval = FALSE}
+devtools::install_github("isteves/dataspice")
+```
+
+## Example
+```{r}
+library(emlspice)
+library(eml2)
+
+eml_path <- system.file("LeConte_meteo_metadata.xml", package = "emlspice")
+eml <- read_eml(eml_path)
+```
+
+Currently, there are 4 functions in the package, which each take an `emld` object (using `eml2::read_eml` and translates it to the dataspice tables.
+
+Here are the first few lines of each tabular format:
+
+```{r eval = FALSE}
+es_attributes(eml)
+```
+
+```{r echo = FALSE}
+es_attributes(eml) %>% head() %>% kable() 
+```
+
+```{r eval = FALSE}
+es_access(eml)
+```
+
+```{r echo = FALSE}
+es_access(eml) %>% head() %>% kable() 
+```
+
+```{r eval = FALSE}
+es_biblio(eml)
+```
+
+```{r echo = FALSE}
+es_biblio(eml) %>% 
+    mutate(license = str_replace_all(license, "\n", "")) %>% 
+    kable() 
+```
+
+```{r eval = FALSE}
+es_creators(eml)
+```
+
+```{r echo = FALSE}
+es_creators(eml) %>% head() %>% kable() 
+```
