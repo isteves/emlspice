@@ -40,7 +40,7 @@ eml_path <- system.file("LeConte_meteo_metadata.xml", package = "emlspice")
 eml <- read_eml(eml_path)
 ```
 
-Currently, there are 4 functions in the package, which each take an `emld` object (using `eml2::read_eml` and translates it to the dataspice tables.
+Currently, there are 4 functions in the package, which each take an `emld` object (using `eml2::read_eml` and translates it to a dataspice table.
 
 Here are the first few lines of each tabular format:
 
