@@ -45,19 +45,19 @@ Currently, there are 4 functions in the package, which each take an `emld` objec
 Here are the first few lines of each tabular format:
 
 ```{r eval = FALSE}
-es_attributes(eml)
-```
-
-```{r echo = FALSE}
-es_attributes(eml) %>% head() %>% kable() 
-```
-
-```{r eval = FALSE}
 es_access(eml)
 ```
 
 ```{r echo = FALSE}
 es_access(eml) %>% head() %>% kable() 
+```
+
+```{r eval = FALSE}
+es_attributes(eml)
+```
+
+```{r echo = FALSE}
+es_attributes(eml) %>% head() %>% kable() 
 ```
 
 ```{r eval = FALSE}

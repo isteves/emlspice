@@ -32,6 +32,16 @@ Currently, there are 4 functions in the package, which each take an `emld` objec
 Here are the first few lines of each tabular format:
 
 ``` r
+es_access(eml)
+```
+
+| fileName             | name                 | contentUrl                                                                           | fileFormat |
+|:---------------------|:---------------------|:-------------------------------------------------------------------------------------|:-----------|
+| campbell\_data60.csv | campbell\_data60.csv | <https://cn.dataone.org/cn/v2/resolve/urn:uuid:cd9f09f0-04b6-4acf-aa4a-49ae438b99e5> | text/csv   |
+| campbell\_data15.csv | campbell\_data15.csv | <https://cn.dataone.org/cn/v2/resolve/urn:uuid:ee590dc8-0c24-4cb4-85ad-647214f41753> | text/csv   |
+| hobo\_climate.csv    | hobo\_climate.csv    | <https://cn.dataone.org/cn/v2/resolve/urn:uuid:087bf762-ea3d-444f-ba59-1c0bc02fd415> | text/csv   |
+
+``` r
 es_attributes(eml)
 ```
 
@@ -43,16 +53,6 @@ es_attributes(eml)
 | campbell\_data60.csv | BP\_mmHg\_Avg | Average barometric pressure in mm Hg; missing values: "" = station not operational; NA = something                                                                                                                                        | millimetersMercury  |
 | campbell\_data60.csv | BattV\_Avg    | Average battery voltage, should be &gt;12; missing values: "" = station not operational; NA = something                                                                                                                                   | volt                |
 | campbell\_data60.csv | BattV\_Min    | Minimum battery voltage; missing values: "" = station not operational; NA = something                                                                                                                                                     | volt                |
-
-``` r
-es_access(eml)
-```
-
-| fileName             | name                 | contentUrl                                                                           | fileFormat |
-|:---------------------|:---------------------|:-------------------------------------------------------------------------------------|:-----------|
-| campbell\_data60.csv | campbell\_data60.csv | <https://cn.dataone.org/cn/v2/resolve/urn:uuid:cd9f09f0-04b6-4acf-aa4a-49ae438b99e5> | text/csv   |
-| campbell\_data15.csv | campbell\_data15.csv | <https://cn.dataone.org/cn/v2/resolve/urn:uuid:ee590dc8-0c24-4cb4-85ad-647214f41753> | text/csv   |
-| hobo\_climate.csv    | hobo\_climate.csv    | <https://cn.dataone.org/cn/v2/resolve/urn:uuid:087bf762-ea3d-444f-ba59-1c0bc02fd415> | text/csv   |
 
 ``` r
 es_biblio(eml)
