@@ -4,7 +4,7 @@ eml_path <- system.file("LeConte_meteo_metadata.xml", package = "emlspice")
 eml <- read_eml(eml_path)
 eml_biblio <- es_biblio(eml)
 
-test_that("Check that fields match up", {
+test_that("Tabular format matches EML", {
     #title
     expect_equal(eml$dataset$title,
                  eml_biblio$title)

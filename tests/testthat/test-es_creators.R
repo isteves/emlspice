@@ -4,7 +4,7 @@ eml_path <- system.file("LeConte_meteo_metadata.xml", package = "emlspice")
 eml <- read_eml(eml_path)
 eml_creators <- es_creators(eml)
 
-test_that("Fields match", {
+test_that("Tabular format matches EML", {
     orcids <-  eml_get(eml, "userId") %>% paste(collapse = " ")
     givenNames <- eml_get(eml, "givenName") %>% paste(collapse = " ")
     surNames <- eml_get(eml, "surName") %>% paste(collapse = " ")
