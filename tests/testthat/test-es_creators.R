@@ -11,24 +11,18 @@ test_that("Tabular format matches EML", {
     affiliations <- eml_get(eml, "organizationName") %>% paste(collapse = " ")
     emails <- eml_get(eml, "electronicMailAddress") %>% paste(collapse = " ")
     
-    
-    expect_true(all(stringr::str_detect(orcids, 
-                                        eml_creators$id), 
+    expect_true(all(stringr::str_detect(orcids, eml_creators$id), 
                     na.rm = TRUE))
     
-    expect_true(all(stringr::str_detect(givenNames, 
-                                        eml_creators$givenName), 
+    expect_true(all(stringr::str_detect(givenNames, eml_creators$givenName), 
                     na.rm = TRUE))
     
-    expect_true(all(stringr::str_detect(surNames, 
-                                        eml_creators$familyName), 
+    expect_true(all(stringr::str_detect(surNames, eml_creators$familyName), 
                     na.rm = TRUE))
     
-    expect_true(all(stringr::str_detect(affiliations, 
-                                        eml_creators$affiliation), 
+    expect_true(all(stringr::str_detect(affiliations, eml_creators$affiliation), 
                     na.rm = TRUE))
     
-    expect_true(all(stringr::str_detect(emails, 
-                                        eml_creators$email), 
+    expect_true(all(stringr::str_detect(emails, eml_creators$email), 
                     na.rm = TRUE))
 })
