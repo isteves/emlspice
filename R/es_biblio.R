@@ -25,6 +25,7 @@ es_biblio <- function(eml, path = NULL) {
             grepl("packageId", name) ~ "identifier",
             grepl("keyword", name) ~ "keywords",
             grepl("intellectual", name) ~ "license",
+            grepl("fund", name) ~ "funder",
             grepl("geographicDescription", name) ~ "geographicDescription",
             grepl("northBoundingCoordinate", name) ~ "northBoundCoord",
             grepl("eastBoundingCoordinate", name) ~ "eastBoundCoord",
@@ -35,6 +36,8 @@ es_biblio <- function(eml, path = NULL) {
             grepl("endDate", name) ~ "endDate"
         )) %>% 
         stats::na.omit() %>% 
+        dplyr::group_by(name) %>% 
+        dplyr::summarize(value = paste(value, collapse = "; ")) %>% 
         tidyr::spread(name, value)
     
     biblio_template <- dplyr::tibble(title = "NA", 
