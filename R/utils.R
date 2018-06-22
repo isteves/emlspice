@@ -11,6 +11,3 @@ get_entities <- function(eml,
         purrr::map_if(eval(parse(text = level_cond)), list) %>% 
         unlist(recursive = FALSE) 
 }
-
-level_id <- c("jdsklfj")
-
