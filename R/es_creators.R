@@ -19,13 +19,13 @@
 #' }
 
 es_creators <- function(eml, path = NULL) {
-    people <- list(creator = eml$dataset$creator,
-                   contact = eml$dataset$contact,
-                   metadataProvider = eml$dataset$metadataProvider,
-                   associatedParty= eml$dataset$associatedParty) %>% 
-        purrr::discard(function(x) {"references" %in% names(unlist(x))}) %>% 
-        purrr::flatten()
-    
+    people <- get_entities(eml, 
+                           entities = c("creator", "contact", "associatedParty", "metadataProvider"),
+                           level_id = c("individualName", "organizationName"))
+    if(!is.null(names(people))){
+        people <- people[names(people) == ""]
+    }
+
     people_parsed <- lapply(people, function(x){x %>% 
             unlist() %>% 
             tibble::enframe() %>% 
@@ -36,11 +36,15 @@ es_creators <- function(eml, path = NULL) {
                 grepl("organizationName", name) ~ "affiliation",
                 grepl("electronicMailAddress", name) ~ "email"
             )) %>% 
-            stats::na.omit() %>% 
+            stats::na.omit() %>%
+            # merge fields together if duplicated (ex: givenName1 & givenName2)
+            group_by(name) %>% 
+            dplyr::summarize(value = paste(value, collapse = " ")) %>% 
             tidyr::spread(name, value)
     })
     
-    out <- dplyr::bind_rows(people_parsed)
+    out <- dplyr::bind_rows(people_parsed) %>% 
+        dplyr::distinct()
     
     fields <- c("id", "givenName", "familyName", "affiliation", "email")
     out <- out[, fields[fields %in% colnames(out)]]

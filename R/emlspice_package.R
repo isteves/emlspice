@@ -11,5 +11,5 @@
 NULL
 
 if(getRversion() >= "2.1.15") {
-    utils::globalVariables(c("name", "value"))
+    utils::globalVariables(c("name", "value", "variableName"))
 }

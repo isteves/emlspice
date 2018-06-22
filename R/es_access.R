@@ -8,9 +8,9 @@ get_access_spice <- function(x){
             grepl("url", name) ~ "contentUrl",
             grepl("formatName", name) ~ "fileFormat"
         )) %>% 
-        na.omit() %>% 
+        stats::na.omit() %>% 
         filter(value != "download") %>% #often also included as url
-        spread(name, value)
+        tidyr::spread(name, value)
 }
 
 #' Get access from EML

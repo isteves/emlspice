@@ -1,7 +1,7 @@
 context("es_attributes")
 
 eml_path <- system.file("LeConte_meteo_metadata.xml", package = "emlspice")
-eml <- read_eml(eml_path)
+eml <- eml2::read_eml(eml_path)
 eml_attributes <- es_attributes(eml)
 
 test_that("Tabular format matches EML", {

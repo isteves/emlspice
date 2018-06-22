@@ -15,13 +15,19 @@ get_attributes_spice <- function(x) {
     } else {
         attr <- eml2::get_attributes(attrList)
         
-        #set datetime format as unit
-        na_units <- is.na(attr$attributes$unit)
-        attr$attributes$unit[na_units] <- attr$attributes$formatString[na_units]
+        if(is.null(attr$attributes$unit)){
+            attr$attributes$unit <- NA
+        }
+        
+        #set datetime format as unitText if available
+        if(!is.null(attr$attributes$formatString)){
+            na_units <- is.na(attr$attributes$unit)
+            attr$attributes$unit[na_units] <- attr$attributes$formatString[na_units]
+        }
         
         #get missing value info in text form:
         missing_val <- dplyr::tibble(missingValueCode = c(attr$attributes$missingValueCode, "NA"),
-                                     missingValueCodeExplanation = c(attr$attributes$missingValueCodeExplanation, "something")) %>% 
+                                     missingValueCodeExplanation = c(attr$attributes$missingValueCodeExplanation, "NA")) %>% 
             dplyr::distinct() %>% 
             stats::na.omit()
         

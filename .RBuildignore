@@ -3,3 +3,5 @@
 ^\.travis\.yml$
 ^\.httr-oauth$
 ^\.Rprofile$
+^\.Rmd$
+^\.xml$
