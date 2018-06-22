@@ -39,24 +39,12 @@ es_biblio <- function(eml, path = NULL) {
         dplyr::group_by(name) %>% 
         dplyr::summarize(value = paste(value, collapse = "; ")) %>% 
         tidyr::spread(name, value)
+
+    #reorder 
+    fields <- c("title", "description", "datePublished", "citation", "keywords", "license", "funder", "geographicDescription", "northBoundCoord", "eastBoundCoord", "southBoundCoord", "westBoundCoord", "wktString", "startDate", "endDate")
     
-    biblio_template <- dplyr::tibble(title = "NA", 
-                                     description = "NA",
-                                     datePublished  = "NA",
-                                     citation  = "NA",
-                                     keywords = "NA",
-                                     license = "NA",
-                                     funder = "NA",
-                                     geographicDescription  = "NA",
-                                     northBoundCoord = "NA",
-                                     eastBoundCoord = "NA",
-                                     southBoundCoord = "NA",
-                                     westBoundCoord = "NA",
-                                     wktString = "NA",
-                                     startDate = "NA",
-                                     endDate = "NA")
     
-    out <- dplyr::bind_rows(biblio_template, biblio_eml)[-1,]
+    out <- biblio_eml[, fields[fields %in% colnames(biblio_eml)]]
     
     return(out)
     

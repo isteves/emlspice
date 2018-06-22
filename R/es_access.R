@@ -1,3 +1,18 @@
+get_access_spice <- function(x){
+    x %>% 
+        unlist() %>% 
+        tibble::enframe() %>% 
+        dplyr::mutate(name = dplyr::case_when(
+            grepl("objectName", name) ~ "fileName",
+            grepl("entityName", name) ~ "name",
+            grepl("url", name) ~ "contentUrl",
+            grepl("formatName", name) ~ "fileFormat"
+        )) %>% 
+        na.omit() %>% 
+        filter(value != "download") %>% #often also included as url
+        spread(name, value)
+}
+
 #' Get access from EML
 #' 
 #' Return EML access in the dataspice access.csv format.
@@ -15,36 +30,14 @@
 #' }
 
 es_access <- function(eml, path = NULL) {
-    
-    get_access_spice <- function(x){
-        x %>% 
-            unlist() %>% 
-            tibble::enframe() %>% 
-            dplyr::mutate(name = dplyr::case_when(
-                grepl("objectName", name) ~ "fileName",
-                grepl("entityName", name) ~ "name",
-                grepl("url", name) ~ "contentUrl",
-                grepl("formatName", name) ~ "fileFormat"
-            )) %>% 
-            na.omit() %>% 
-            filter(value != "download") %>% #often also included as url
-            spread(name, value)
-    }
-
-    entities <- c("dataTable", "spatialRaster", "spatialVector", "storedProcedure", "view", "otherEntity")
-    entities <- entities[entities %in% names(eml$dataset)]
-    
-    entity_objs <- purrr::map(entities, ~eml2::eml_get(eml, .x)) %>% 
-        # restructure so that all entities are at the same level
-        purrr::map_if(~!is.null(.x$entityName), list) %>% 
-        unlist(recursive = FALSE) 
-    
-    access_entities <- lapply(entity_objs, get_access_spice)
+    entities <- get_entities(eml)
+    access_entities <- lapply(entities, get_access_spice)
     
     out <- dplyr::bind_rows(access_entities)
     
     #reorder
-    out <- out[, c("fileName", "name", "contentUrl", "fileFormat")]
+    fields <- c("fileName", "name", "contentUrl", "fileFormat")
+    out <- out[, fields[fields %in% colnames(out)]]
     
     return(out)
     

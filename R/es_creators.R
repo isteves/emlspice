@@ -40,13 +40,10 @@ es_creators <- function(eml, path = NULL) {
             tidyr::spread(name, value)
     })
     
-    creators_template <- dplyr::tibble(id = "NA", 
-                                       givenName = "NA",
-                                       familyName  = "NA",
-                                       affiliation  = "NA",
-                                       email = "NA")
+    out <- dplyr::bind_rows(people_parsed)
     
-    out <- dplyr::bind_rows(creators_template, people_parsed)[-1,]
+    fields <- c("id", "givenName", "familyName", "affiliation", "email")
+    out <- out[, fields[fields %in% colnames(out)]]
     
     return(out)
     
