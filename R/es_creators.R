@@ -3,9 +3,8 @@
 #' Return EML creators in the dataspice creators.csv format.
 #'
 #' @param eml (emld) an EML object
-#' @param path (character) file path for saving the table to disk
+#' @param path (character) folder path for saving the table to disk
 #' 
-#' @importFrom purrr discard
 #' @importFrom purrr discard
 #' @importFrom tibble enframe
 #'
@@ -50,7 +49,10 @@ es_creators <- function(eml, path = NULL) {
     out <- out[, fields[fields %in% colnames(out)]]
     
     if(!is.null(path)){
-        readr::write_csv(out, path = path)
+        if(!dir.exists(path)){
+            dir.create(path)
+        }
+        readr::write_csv(out, file.path(path, "creators.csv"))
     }
     
     return(out)

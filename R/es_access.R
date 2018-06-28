@@ -18,7 +18,7 @@ get_access_spice <- function(x){
 #' Return EML access in the dataspice access.csv format.
 #'
 #' @param eml (emld) an EML object
-#' @param path (character) file path for saving the table to disk
+#' @param path (character) folder path for saving the table to disk
 #'
 #' @export
 #'
@@ -40,7 +40,10 @@ es_access <- function(eml, path = NULL) {
     out <- out[, fields[fields %in% colnames(out)]]
     
     if(!is.null(path)){
-        readr::write_csv(out, path = path)
+        if(!dir.exists(path)){
+            dir.create(path)
+        }
+        readr::write_csv(out, file.path(path, "access.csv"))
     }
     
     return(out)

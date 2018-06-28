@@ -51,7 +51,7 @@ get_attributes_spice <- function(x) {
 #' Return EML attributes in the dataspice attributes.csv format.
 #'
 #' @param eml (emld) an EML object
-#' @param path (character) file path for saving the table to disk
+#' @param path (character) folder path for saving the table to disk
 #'
 #' @export
 #' 
@@ -73,7 +73,10 @@ es_attributes <- function(eml, path = NULL) {
         filter(!is.na(variableName))
     
     if(!is.null(path)){
-        readr::write_csv(out, path = path)
+        if(!dir.exists(path)){
+            dir.create(path)
+        }
+        readr::write_csv(out, file.path(path, "attributes.csv"))
     }
     
     return(out)

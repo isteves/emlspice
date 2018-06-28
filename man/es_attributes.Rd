@@ -9,7 +9,7 @@ es_attributes(eml, path = NULL)
 \arguments{
 \item{eml}{(emld) an EML object}
 
-\item{path}{(character) file path for saving the table to disk}
+\item{path}{(character) folder path for saving the table to disk}
 }
 \description{
 Return EML attributes in the dataspice attributes.csv format.

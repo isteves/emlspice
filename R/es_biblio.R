@@ -3,7 +3,7 @@
 #' Return EML biblio in the dataspice biblio.csv format.
 #'
 #' @param eml (emld) an EML object
-#' @param path (character) file path for saving the table to disk
+#' @param path (character) folder path for saving the table to disk
 #'
 #' @export
 #'
@@ -47,7 +47,10 @@ es_biblio <- function(eml, path = NULL) {
     out <- biblio_eml[, fields[fields %in% colnames(biblio_eml)]]
     
     if(!is.null(path)){
-        readr::write_csv(out, path = path)
+        if(!dir.exists(path)){
+            dir.create(path)
+        }
+        readr::write_csv(out, file.path(path, "biblio.csv"))
     }
     
     return(out)
