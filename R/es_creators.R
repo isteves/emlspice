@@ -49,9 +49,9 @@ es_creators <- function(eml, path = NULL) {
     fields <- c("id", "givenName", "familyName", "affiliation", "email")
     out <- out[, fields[fields %in% colnames(out)]]
     
-    return(out)
-    
     if(!is.null(path)){
         readr::write_csv(out, path = path)
     }
+    
+    return(out)
 }

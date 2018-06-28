@@ -39,9 +39,9 @@ es_access <- function(eml, path = NULL) {
     fields <- c("fileName", "name", "contentUrl", "fileFormat")
     out <- out[, fields[fields %in% colnames(out)]]
     
-    return(out)
-    
     if(!is.null(path)){
         readr::write_csv(out, path = path)
     }
+    
+    return(out)
 }

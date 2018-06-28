@@ -72,9 +72,9 @@ es_attributes <- function(eml, path = NULL) {
     out <- dplyr::bind_rows(attrTables) %>% 
         filter(!is.na(variableName))
     
-    return(out)
-    
     if(!is.null(path)){
         readr::write_csv(out, path = path)
     }
+    
+    return(out)
 }

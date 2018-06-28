@@ -46,9 +46,9 @@ es_biblio <- function(eml, path = NULL) {
     
     out <- biblio_eml[, fields[fields %in% colnames(biblio_eml)]]
     
-    return(out)
-    
     if(!is.null(path)){
         readr::write_csv(out, path = path)
     }
+    
+    return(out)
 }
